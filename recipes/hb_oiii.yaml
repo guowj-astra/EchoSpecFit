@@ -1,0 +1,27 @@
+name: hb_oiii
+rest_min: 4700.0
+rest_max: 5100.0
+continuum_type: linear
+kinematic_groups:
+  - name: narrow
+    velocity_bounds: [-800.0, 800.0]
+    sigma_bounds: [50.0, 1000.0]
+  - name: broad
+    velocity_bounds: [-3000.0, 3000.0]
+    sigma_bounds: [800.0, 10000.0]
+lines:
+  - name: Hb_narrow
+    restwave: 4861.33
+    group: narrow
+  - name: OIII_4959
+    restwave: 4958.91
+    group: narrow
+  - name: OIII_5007
+    restwave: 5006.84
+    group: narrow
+    flux_ratio_to: OIII_4959
+    flux_ratio: 2.98
+  - name: Hb_broad
+    restwave: 4861.33
+    group: broad
+    optional: true
