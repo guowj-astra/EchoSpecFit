@@ -1,0 +1,4 @@
+# Placeholder recipe for future pPXF stellar-continuum fitting.
+name: stellar_ppxf
+description: Stellar continuum fitting recipe placeholder.
+

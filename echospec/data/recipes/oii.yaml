@@ -1,0 +1,31 @@
+default_recipe: blend
+recipes:
+  blend:
+    name: oii_blend
+    rest_min: 3650.0
+    rest_max: 3800.0
+    continuum_type: linear
+    kinematic_groups:
+      - name: narrow
+        velocity_bounds: [-800.0, 800.0]
+        sigma_bounds: [50.0, 1000.0]
+    lines:
+      - name: OII_3727_blend
+        restwave: 3727.50
+        group: narrow
+  doublet:
+    name: oii_doublet
+    rest_min: 3650.0
+    rest_max: 3800.0
+    continuum_type: linear
+    kinematic_groups:
+      - name: narrow
+        velocity_bounds: [-800.0, 800.0]
+        sigma_bounds: [50.0, 1000.0]
+    lines:
+      - name: OII_3726
+        restwave: 3726.03
+        group: narrow
+      - name: OII_3729
+        restwave: 3728.82
+        group: narrow

@@ -1,0 +1,33 @@
+name: ha_nii_sii
+rest_min: 6400.0
+rest_max: 6800.0
+continuum_type: linear
+kinematic_groups:
+  - name: narrow
+    velocity_bounds: [-800.0, 800.0]
+    sigma_bounds: [50.0, 1000.0]
+  - name: broad
+    velocity_bounds: [-3000.0, 3000.0]
+    sigma_bounds: [800.0, 10000.0]
+lines:
+  - name: Ha_narrow
+    restwave: 6562.80
+    group: narrow
+  - name: NII_6548
+    restwave: 6548.05
+    group: narrow
+  - name: NII_6584
+    restwave: 6583.45
+    group: narrow
+    flux_ratio_to: NII_6548
+    flux_ratio: 2.96
+  - name: SII_6716
+    restwave: 6716.44
+    group: narrow
+  - name: SII_6731
+    restwave: 6730.82
+    group: narrow
+  - name: Ha_broad
+    restwave: 6562.80
+    group: broad
+    optional: true
