@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the software and the underlying methods and template libraries used in your analysis."
+title: EchoSpecFit
+type: software
+authors:
+  - family-names: Guo
+    given-names: Wei-Jian
+version: 0.1.0
+date-released: 2026-10-10
+url: "https://github.com/guowj-astro/EchoSpecFit"
+repository-code: "https://github.com/guowj-astro/EchoSpecFit"
+license: MIT

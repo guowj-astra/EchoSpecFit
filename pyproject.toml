@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "EchoSpecFit"
+version = "0.1.0"
+description = "AGN spectral fitting with pPXF host continua, Fe II, and emission-line models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Wei-Jian Guo"}]
+dependencies = [
+    "numpy>=1.23,<2",
+    "scipy>=1.9",
+    "astropy>=5",
+    "matplotlib>=3.6",
+    "pandas>=1.5",
+    "PyYAML>=6",
+    "lmfit>=1.2",
+    "ppxf>=9",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Intended Audience :: Science/Research",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+echospecfit = "echospecfit.cli:main"
+desipecfit = "echospecfit.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["echospecfit*", "desipecfit*", "echospec*"]
+exclude = ["tests*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+echospec = ["data/recipes/*.yaml", "data/recipes/*.yml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib"
