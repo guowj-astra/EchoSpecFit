@@ -15,7 +15,7 @@ Repeat-spectrum utilities compare line fluxes, BPT ratios and [O III]/[O II].
 Python 3.10 or later is required.
 
 ```bash
-git clone https://github.com/guowj-astro/EchoSpecFit.git
+git clone https://github.com/guowj-astra/EchoSpecFit.git
 cd EchoSpecFit
 python -m pip install .
 ```
